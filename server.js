@@ -29,8 +29,8 @@ app.get('/profile/:id',profile.handleProfile(db))
 app.put('/image', image.handleImage(db))
 app.post('/imageurl', image.handleApiCall())
 
-app.listen(3002,()=>{
-	console.log('server is working!')
+app.listen(process.env.PORT||3002,()=>{
+	console.log(`app is running on port ${process.evn.PORT}`)
 })
 
 
